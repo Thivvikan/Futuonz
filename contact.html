@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Futuonz – Start Your Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="site-body">
+  <header class="page-header">
+    <div class="site-nav">
+      <nav class="hero-nav">
+        <a href="index.html" class="brand">
+          <img src="images/futuonz-home-logo.jpg" alt="Futuonz logo" class="brand-logo" />
+          <div class="brand-text">
+            <span class="brand-name">FUTUONZ</span>
+            <span class="brand-tagline">THE FUTURE COMES TODAY</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html" class="nav-cta nav-active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="page-hero-content">
+      <h1>Contact Futuonz</h1>
+      <p>
+        Tell us about your project and we will get back within one business day
+        with next steps and a suggested plan.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-section contact-page-section">
+      <div class="page-inner contact-page-inner">
+        <div class="contact-details">
+          <h2>Let’s Talk About Your Website</h2>
+          <p>
+            Share a bit about your business, your current situation and what you want
+            your new site to achieve. The more detail you provide, the better we can
+            prepare ideas for you.
+          </p>
+          <ul class="contact-info-list">
+            <li><strong>Email:</strong> <a href="mailto:futuonz@gmail.com">futuonz@gmail.com</a></li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/94765893654?text=Hi%20Futuonz%2C%20I%27m%20interested%20in%20a%20new%20website." target="_blank" rel="noopener">+94 76 589 3654</a></li>
+            <li><strong>Availability:</strong> Monday – Friday, 10:00 – 18:00</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" action="contact.php" method="POST">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="business">Business / brand name</label>
+              <input type="text" id="business" name="business" placeholder="Your company or brand" />
+            </div>
+            <div class="form-field">
+              <label for="budget">Approximate budget</label>
+              <select id="budget" name="budget">
+                <option value="">Select a range</option>
+                <option value="under500">Under $500</option>
+                <option value="500-1000">$500 – $1,000</option>
+                <option value="1000-3000">$1,000 – $3,000</option>
+                <option value="3000plus">$3,000+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you need from your new website"></textarea>
+          </div>
+          <button type="submit" class="btn-primary contact-submit">Send Message</button>
+          <p class="form-note">This form is for demonstration – connect it to your preferred email or CRM service.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-name">FUTUONZ</span>
+        <span class="footer-tagline">The Future Comes Today</span>
+      </div>
+      <div class="footer-meta">
+        <span>&copy; 2025 Futuonz. All rights reserved.</span>
+        <a href="mailto:futuonz@gmail.com">futuonz@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
