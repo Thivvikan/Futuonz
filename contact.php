@@ -49,13 +49,13 @@ $headers[] = 'X-Mailer: PHP/' . phpversion();
 <body class="site-body">
   <header class="page-header">
     <nav class="hero-nav">
-      <div class="brand">
-        <img src="images/futuonz-logo.png" alt="Futuonz logo" class="brand-logo" />
+      <a href="index.html" class="brand">
+        <img src="images/futuonz-home-logo.jpg" alt="Futuonz logo" class="brand-logo" />
         <div class="brand-text">
           <span class="brand-name">FUTUONZ</span>
           <span class="brand-tagline">THE FUTURE COMES TODAY</span>
         </div>
-      </div>
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -68,7 +68,7 @@ $headers[] = 'X-Mailer: PHP/' . phpversion();
     <div class="page-hero-content">
       <h1>Thank You</h1>
       <p>
-        Your message has been sent to Futuonz. We’ll review your details and
+        Your message has been sent to Futuonz. We'll review your details and
         get back to you as soon as possible.
       </p>
     </div>
