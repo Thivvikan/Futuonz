@@ -40,7 +40,7 @@
     <section class="page-section contact-page-section">
       <div class="page-inner contact-page-inner">
         <div class="contact-details">
-          <h2>Let's Talk About Your Website</h2>
+          <h2>Let’s Talk About Your Website</h2>
           <p>
             Share a bit about your business, your current situation and what you want
             your new site to achieve. The more detail you provide, the better we can
@@ -53,7 +53,7 @@
           </ul>
         </div>
 
-        <form class="contact-form" action="contact.php" method="POST">
+        <form class="contact-form" id="contact-form" method="POST">
           <div class="form-row">
             <div class="form-field">
               <label for="name">Full name</label>
@@ -70,13 +70,13 @@
               <input type="text" id="business" name="business" placeholder="Your company or brand" />
             </div>
             <div class="form-field">
-              <label for="budget">Approximate budget</label>
+              <label for="budget">Approximate budget / plan</label>
               <select id="budget" name="budget">
-                <option value="">Select a range</option>
-                <option value="under500">Under $500</option>
-                <option value="500-1000">$500 – $1,000</option>
-                <option value="1000-3000">$1,000 – $3,000</option>
-                <option value="3000plus">$3,000+</option>
+                <option value="">Choose a plan or price range</option>
+                <option value="basic-web">$80 – Basic Web Plan (1 page)</option>
+                <option value="standard-web">$325 – Standard Web Plan (5 pages)</option>
+                <option value="premium-web">$500 – Premium Web Plan (10 pages + e-commerce)</option>
+                <option value="poster-packages">$2.50-$75 – Poster & Social Media packages</option>
               </select>
             </div>
           </div>
@@ -84,8 +84,11 @@
             <label for="message">Project details</label>
             <textarea id="message" name="message" rows="5" placeholder="Tell us what you need from your new website"></textarea>
           </div>
+          <input type="hidden" name="_subject" value="New contact from the Futuonz website" />
+          <input type="hidden" name="_captcha" value="false" />
           <button type="submit" class="btn-primary contact-submit">Send Message</button>
-          <p class="form-note">This form is for demonstration – connect it to your preferred email or CRM service.</p>
+          <p class="form-note form-status" id="form-status" aria-live="polite"></p>
+          <p class="form-note">This form sends emails via FormSubmit.co; you will receive a verification link when you submit the first message.</p>
         </form>
       </div>
     </section>
@@ -102,5 +105,45 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+
+      if (!form || !status) {
+        return;
+      }
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        const submitButton = form.querySelector('button[type="submit"]');
+        status.textContent = "Sending your message…";
+        submitButton.disabled = true;
+
+        try {
+          const response = await fetch("https://formsubmit.co/ajax/futuonz@gmail.com", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+            },
+            body: new FormData(form),
+          });
+
+          if (!response.ok) {
+            throw new Error("Submission failed");
+          }
+
+          status.textContent = "Thank you! Your message has been sent.";
+          form.reset();
+        } catch (error) {
+          status.textContent =
+            "Unable to send the message right now; please email futuonz@gmail.com directly.";
+          console.error("Contact form error:", error);
+        } finally {
+          submitButton.disabled = false;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

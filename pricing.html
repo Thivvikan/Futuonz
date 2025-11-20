@@ -3,7 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Futuonz Pricing - Web & Creative Plans</title>
+  <title>Futuonz Pricing — WordPress & Custom Web Development Plans</title>
+  <meta
+    name="description"
+    content="Explore Futuonz pricing for WordPress websites, poster designs, and custom-built web experiences. Compare the Basic, Standard, and Premium plans or book a custom consultancy."
+  />
+  <meta
+    name="keywords"
+    content="WordPress development, custom web development, pricing plans, Futuonz, website packages, poster design, social media management"
+  />
+  <meta property="og:title" content="Futuonz Pricing — WordPress & Custom Web Development Plans" />
+  <meta
+    property="og:description"
+    content="Transparent pricing for WordPress websites, poster design, and social media support from Futuonz. Easily browse the Basic through Premium plans or request a custom build."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/pricing.html" />
+  <meta property="og:image" content="https://yourdomain.com/images/futuonz-home-logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Futuonz Pricing — WordPress & Custom Web Development Plans" />
+  <meta
+    name="twitter:description"
+    content="Transparent pricing for WordPress websites, poster design, and social media support from Futuonz. Easily browse the Basic through Premium plans or request a custom build."
+  />
+  <link rel="canonical" href="https://yourdomain.com/pricing.html" />
+  <meta name="robots" content="index, follow" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="site-body">
@@ -38,17 +62,46 @@
 
   <main>
     <section class="pricing-section">
+      <div class="pricing-options-wrapper">
+        <div class="pricing-options">
+          <article class="pricing-option-card">
+            <h3>WordPress Development</h3>
+            <p>
+              Prebuilt WordPress tiers give you a fast path to launch with polished templates, essential SEO, and automation.
+              Browse the packages below to pick the right size for your team.
+            </p>
+            <a href="#wordpress-packages" class="btn-outline option-link">View WordPress packages</a>
+          </article>
+          <article class="pricing-option-card">
+            <h3>Custom Build Websites</h3>
+            <p>
+              Every custom build is scoped around your unique requirements.
+              Pricing is calculated and confirmed only after we nail down the full scope together.
+            </p>
+            <a href="contact.html" class="btn-outline option-link">Book a custom consultancy</a>
+          </article>
+        </div>
+      </div>
       <div class="pricing-header">
-        <h2>Web Service Pricing Plans (WordPress · USD)</h2>
+        <div class="pricing-header-top">
+          <h2>Web Service Pricing Plans (WordPress)</h2>
+          <label class="currency-switch" for="currency-selector">
+            <span>Currency</span>
+            <select id="currency-selector">
+              <option value="usd">USD</option>
+            </select>
+          </label>
+        </div>
         <p>These website packages are for WordPress development, matching the Basic, Standard and Premium plans in your brochure.</p>
+        <p class="currency-note" id="currency-note">Prices listed in USD for WordPress development packages.</p>
       </div>
 
-      <div class="pricing-grid">
+      <div class="pricing-grid" id="wordpress-packages">
         <article class="pricing-card">
           <h3>Basic Web Plan</h3>
           <p class="tagline">1‑page WordPress website</p>
           <p class="price">
-            <span>$80</span>
+            <span data-price-usd="80">$80</span>
             <span class="price-term">one‑time fee</span>
           </p>
           <ul class="features">
@@ -68,7 +121,7 @@
           <h3>Standard Web Plan</h3>
           <p class="tagline">5‑page WordPress website</p>
           <p class="price">
-            <span>$325</span>
+            <span data-price-usd="325">$325</span>
             <span class="price-term">one‑time fee</span>
           </p>
           <ul class="features">
@@ -89,7 +142,7 @@
           <h3>Premium Web Plan</h3>
           <p class="tagline">10‑page WordPress website + e‑commerce</p>
           <p class="price">
-            <span>$500</span>
+            <span data-price-usd="500">$500</span>
             <span class="price-term">one‑time fee</span>
           </p>
           <ul class="features">
@@ -128,7 +181,7 @@
             <h3>Basic Poster</h3>
             <p class="tagline">Single design</p>
             <p class="price">
-              <span>$2.50</span>
+              <span data-price-usd="2.5">$2.50</span>
               <span class="price-term">per poster, one size</span>
             </p>
             <ul class="features">
@@ -142,7 +195,7 @@
             <h3>Premium Poster</h3>
             <p class="tagline">Single design</p>
             <p class="price">
-              <span>$5.00</span>
+              <span data-price-usd="5">$5.00</span>
               <span class="price-term">per poster, one size</span>
             </p>
             <ul class="features">
@@ -162,8 +215,8 @@
             <h3>Basic Poster Pack</h3>
             <p class="tagline">Monthly bundle</p>
             <p class="price">
-              <span>$40</span>
-              <span class="price-term">15–18 basic posters</span>
+              <span data-price-usd="40">$40</span>
+              <span class="price-term">15‑18 basic posters</span>
             </p>
             <ul class="features">
               <li>15–18 basic poster designs per month</li>
@@ -176,8 +229,8 @@
             <h3>Premium Poster Pack</h3>
             <p class="tagline">Monthly bundle</p>
             <p class="price">
-              <span>$75</span>
-              <span class="price-term">15–18 premium posters</span>
+              <span data-price-usd="75">$75</span>
+              <span class="price-term">15‑18 premium posters</span>
             </p>
             <ul class="features">
               <li>15–18 premium posters with review & design</li>
@@ -190,7 +243,7 @@
             <h3>Social Media Management</h3>
             <p class="tagline">Done-for-you posting</p>
             <p class="price">
-              <span>$100</span>
+              <span data-price-usd="100">$100</span>
               <span class="price-term">per month</span>
             </p>
             <ul class="features">
@@ -216,5 +269,93 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      const defaultRate = 365;
+      let conversionRate = defaultRate;
+      let rateDate = null;
+      const selector = document.getElementById("currency-selector");
+      const priceElements = document.querySelectorAll("[data-price-usd]");
+      const note = document.getElementById("currency-note");
+
+      function formatUsd(value) {
+        return (
+          "$" +
+          value.toLocaleString("en-US", {
+            maximumFractionDigits: value % 1 ? 2 : 0,
+          })
+        );
+      }
+
+      function formatLkr(value) {
+        return (
+          "LKR " +
+          value.toLocaleString("en-US", {
+            maximumFractionDigits: 0,
+          })
+        );
+      }
+
+      function formatRateDisplay() {
+        const rateText = conversionRate.toLocaleString("en-US", {
+          maximumFractionDigits: 2,
+        });
+        return rateDate
+          ? `Prices shown in LKR (1 USD = ${rateText} LKR as of ${rateDate}).`
+          : `Prices shown in LKR (1 USD ≈ ${rateText} LKR).`;
+      }
+
+      function updatePrices(currency) {
+        priceElements.forEach(function (element) {
+          const usdValue = parseFloat(element.dataset.priceUsd);
+          if (Number.isNaN(usdValue)) {
+            return;
+          }
+
+          element.textContent =
+            currency === "lkr"
+              ? formatLkr(usdValue * conversionRate)
+              : formatUsd(usdValue);
+        });
+
+        if (note) {
+          note.textContent =
+            currency === "lkr"
+              ? formatRateDisplay()
+              : "Prices listed in USD for WordPress development packages.";
+        }
+      }
+
+      async function fetchLiveRate() {
+        try {
+          const response = await fetch(
+            "https://api.exchangerate.host/latest?base=USD&symbols=LKR"
+          );
+          if (!response.ok) {
+            throw new Error("Rate fetch failed");
+          }
+          const data = await response.json();
+          const liveRate = Number(data?.rates?.LKR);
+          if (Number.isFinite(liveRate)) {
+            conversionRate = liveRate;
+            rateDate = data.date || null;
+            if (selector) {
+              updatePrices(selector.value);
+            }
+          }
+        } catch (error) {
+          console.warn("Could not fetch live USD/LKR rate:", error);
+        }
+      }
+
+      if (selector) {
+        selector.addEventListener("change", function (event) {
+          updatePrices(event.target.value);
+        });
+        updatePrices(selector.value);
+        fetchLiveRate();
+      }
+    })();
+  </script>
 </body>
 </html>
