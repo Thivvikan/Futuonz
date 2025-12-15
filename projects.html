@@ -45,6 +45,14 @@
           <div id="all-projects-grid" class="all-projects-grid"></div>
         </div>
 
+        <!-- Project Selector Dropdown -->
+        <div class="project-selector-container">
+          <label for="project-select" class="project-selector-label">Select Project:</label>
+          <select id="project-select" class="project-selector">
+            <option value="">Choose a project...</option>
+          </select>
+        </div>
+
         <!-- Project Preview Display (Full Width Modal-like View) -->
         <div id="project-display" class="project-display">
           <div class="project-display-content">
@@ -183,6 +191,9 @@
           card.classList.remove('active');
         }
       });
+
+      // Update dropdown selection
+      document.getElementById('project-select').value = index;
     }
 
     // Create navigation buttons
@@ -214,9 +225,28 @@
       });
     }
 
+    // Populate project selector dropdown
+    function populateProjectSelector() {
+      const selector = document.getElementById('project-select');
+      projectsData.forEach((project, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = project.title;
+        selector.appendChild(option);
+      });
+
+      selector.addEventListener('change', (event) => {
+        const selectedIndex = parseInt(event.target.value, 10);
+        if (!isNaN(selectedIndex)) {
+          displayProject(selectedIndex);
+        }
+      });
+    }
+
     // Initialize
     createNavButtons();
     createProjectCards();
+    populateProjectSelector();
     displayProject(0);
   </script>
 </body>
