@@ -38,78 +38,34 @@
   <main>
     <section class="page-section projects-section">
       <div class="page-inner">
-        <div class="projects-grid">
-          <article class="project-card">
-            <span class="project-tag">Restaurant / Hospitality</span>
-            <div class="project-thumb">
-              <span>brasserie-esta.com</span>
-            </div>
-            <h2>Brasserie Esta</h2>
-            <p>
-              A stylish restaurant website with a modern layout, menu highlights and clear
-              calls‑to‑action to reserve a table.
-            </p>
-            <ul class="project-points">
-              <li>Hero section that showcases the restaurant’s brand</li>
-              <li>Menu and location information easy to access on mobile</li>
-              <li>Contact details and reservation paths kept highly visible</li>
-            </ul>
-            <a class="project-link" href="https://brasserie-esta.com/" target="_blank" rel="noopener">View live website</a>
-          </article>
+        
+        <!-- All Projects Grid -->
+        <div class="all-projects-container">
+          <h2>All Projects</h2>
+          <div id="all-projects-grid" class="all-projects-grid"></div>
+        </div>
 
-          <article class="project-card">
-            <span class="project-tag">SMS Platform</span>
-            <div class="project-thumb">
-              <span>smsway.lk</span>
+        <!-- Project Preview Display (Full Width Modal-like View) -->
+        <div id="project-display" class="project-display">
+          <div class="project-display-content">
+            <div class="project-preview">
+              <iframe id="display-iframe" src="" title="Project preview"></iframe>
             </div>
-            <h2>SMSWay</h2>
-            <p>
-              A clean, product‑driven site for an SMS gateway platform, focused on explaining
-              features and getting users to sign up.
-            </p>
-            <ul class="project-points">
-              <li>Simple breakdown of platform features and benefits</li>
-              <li>Clear pricing and CTA sections for sign‑ups</li>
-              <li>Responsive layout tuned for desktop and mobile users</li>
-            </ul>
-            <a class="project-link" href="https://smsway.lk/" target="_blank" rel="noopener">View live website</a>
-          </article>
+            <div class="project-display-details">
+              <h2 id="display-title"></h2>
+              <p id="display-description"></p>
+              <ul id="display-points" class="display-points"></ul>
+              <a id="display-link" class="btn-primary" target="_blank" rel="noopener">Visit Project</a>
+            </div>
+          </div>
+        </div>
 
-          <article class="project-card">
-            <span class="project-tag">Corporate / Business</span>
-            <div class="project-thumb">
-              <span>lightblue-sheep-358013.hostingersite.com</span>
-            </div>
-            <h2>Corporate Landing (Hostinger)</h2>
-            <p>
-              A professional one‑page corporate website built on Hostinger, created to present
-              services, company story and a clear contact path.
-            </p>
-            <ul class="project-points">
-              <li>Section‑based layout covering services, about and contact</li>
-              <li>Consistent branding, colours and typography throughout</li>
-              <li>Contact and enquiry sections designed for quick responses</li>
-            </ul>
-            <a class="project-link" href="https://lightblue-sheep-358013.hostingersite.com/" target="_blank" rel="noopener">View live website</a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-tag">Digital Agency</span>
-            <div class="project-thumb">
-              <span>degitalkeyz.com</span>
-            </div>
-            <h2>Digital Keyz</h2>
-            <p>
-              A bold, agency‑style site that highlights services, portfolio and a strong
-              call‑to‑action for new clients.
-            </p>
-            <ul class="project-points">
-              <li>Hero and services sections tuned for lead generation</li>
-              <li>Portfolio / case study areas to show previous work</li>
-              <li>Contact and social links placed for quick reach‑out</li>
-            </ul>
-            <a class="project-link" href="https://degitalkeyz.com/" target="_blank" rel="noopener">View live website</a>
-          </article>
+        <!-- Project Navigation -->
+        <div class="project-nav-container">
+          <div class="project-nav-list">
+            <p class="project-nav-label">Other Projects:</p>
+            <div id="project-nav-buttons" class="project-nav-buttons"></div>
+          </div>
         </div>
 
         <div class="projects-cta">
@@ -123,6 +79,7 @@
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -135,5 +92,132 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Project data
+    const projectsData = [
+      {
+        tag: 'Restaurant / Hospitality',
+        title: 'Brasserie Esta',
+        description: 'A stylish restaurant website with a modern layout, menu highlights and clear calls‑to‑action to reserve a table.',
+        points: [
+          'Hero section that showcases the restaurant\'s brand',
+          'Menu and location information easy to access on mobile',
+          'Contact details and reservation paths kept highly visible'
+        ],
+        url: 'https://brasserie-esta.com/'
+      },
+      {
+        tag: 'SMS Platform',
+        title: 'SMSWay',
+        description: 'A clean, product‑driven site for an SMS gateway platform, focused on explaining features and getting users to sign up.',
+        points: [
+          'Simple breakdown of platform features and benefits',
+          'Clear pricing and CTA sections for sign‑ups',
+          'Responsive layout tuned for desktop and mobile users'
+        ],
+        url: 'https://smsway.lk/'
+      },
+      {
+        tag: 'Corporate / Business',
+        title: 'Corporate Landing (Hostinger)',
+        description: 'A professional one‑page corporate website built on Hostinger, created to present services, company story and a clear contact path.',
+        points: [
+          'Section‑based layout covering services, about and contact',
+          'Consistent branding, colours and typography throughout',
+          'Contact and enquiry sections designed for quick responses'
+        ],
+        url: 'https://lightblue-sheep-358013.hostingersite.com/'
+      },
+      {
+        tag: 'Digital Agency',
+        title: 'Digital Keyz',
+        description: 'A bold, agency‑style site that highlights services, portfolio and a strong call‑to‑action for new clients.',
+        points: [
+          'Hero and services sections tuned for lead generation',
+          'Portfolio / case study areas to show previous work',
+          'Contact and social links placed for quick reach‑out'
+        ],
+        url: 'https://degitalkeyz.com/'
+      }
+    ];
+
+    let currentProjectIndex = 0;
+
+    // Function to display project
+    function displayProject(index) {
+      const project = projectsData[index];
+      currentProjectIndex = index;
+
+      // Update display
+      document.getElementById('display-title').textContent = project.title;
+      document.getElementById('display-description').textContent = project.description;
+      
+      // Update points list
+      const pointsList = document.getElementById('display-points');
+      pointsList.innerHTML = '';
+      project.points.forEach(point => {
+        const li = document.createElement('li');
+        li.textContent = point;
+        pointsList.appendChild(li);
+      });
+
+      // Set iframe and link
+      document.getElementById('display-iframe').src = project.url;
+      document.getElementById('display-link').href = project.url;
+
+      // Update nav buttons - highlight current
+      document.querySelectorAll('.project-nav-btn').forEach((btn, idx) => {
+        if (idx === index) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Update project cards - highlight current
+      document.querySelectorAll('.project-card').forEach((card, idx) => {
+        if (idx === index) {
+          card.classList.add('active');
+        } else {
+          card.classList.remove('active');
+        }
+      });
+    }
+
+    // Create navigation buttons
+    function createNavButtons() {
+      const navContainer = document.getElementById('project-nav-buttons');
+      projectsData.forEach((project, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'project-nav-btn';
+        if (index === 0) btn.classList.add('active');
+        btn.textContent = project.title;
+        btn.addEventListener('click', () => displayProject(index));
+        navContainer.appendChild(btn);
+      });
+    }
+
+    // Create project cards for grid
+    function createProjectCards() {
+      const gridContainer = document.getElementById('all-projects-grid');
+      projectsData.forEach((project, index) => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        if (index === 0) card.classList.add('active');
+        card.innerHTML = `
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+        `;
+        card.addEventListener('click', () => displayProject(index));
+        gridContainer.appendChild(card);
+      });
+    }
+
+    // Initialize
+    createNavButtons();
+    createProjectCards();
+    displayProject(0);
+  </script>
 </body>
 </html>
