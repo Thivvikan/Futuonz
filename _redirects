@@ -1,0 +1,2 @@
+# Netlify Redirects File
+/home   /index.html   301!

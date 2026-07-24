@@ -3,86 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Futuonz Projects – Recent Work</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="alternate icon" type="image/png" href="images/futuonz-home-logo.jpg" />
+  <title>Futuonz Projects – Portfolio & Recent Work</title>
+  <meta name="description" content="Browse selected client projects, SaaS platforms, and custom web applications engineered by Futuonz." />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="site-body">
-  <header class="page-header">
-    <div class="site-nav">
-      <nav class="hero-nav">
-        <a href="index.html" class="brand">
-          <img src="images/futuonz-home-logo.jpg" alt="Futuonz logo" class="brand-logo" />
-          <div class="brand-text">
-            <span class="brand-name">FUTUONZ</span>
-            <span class="brand-tagline">THE FUTURE COMES TODAY</span>
-          </div>
-        </a>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html" class="nav-active">Projects</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html" class="nav-cta">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
 
+  <header class="site-nav">
+    <nav class="hero-nav">
+      <a href="index.html" class="brand">
+        <img src="images/futuonz-home-logo.jpg" alt="Futuonz logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">FUTUONZ</span>
+          <span class="brand-tagline">THE FUTURE COMES TODAY</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="nav-active">Projects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </nav>
+  </header>
+
+  <header class="page-header">
     <div class="page-hero-content">
-      <h1>Recent Projects</h1>
+      <span class="section-kicker">Portfolio</span>
+      <h1>Featured <span class="text-gradient">Client Works</span></h1>
       <p>
-        A look at how Futuonz helps different types of businesses stand out and win online.
+        Explore how Futuonz designs, develops, and launches high-converting websites for businesses across various sectors.
       </p>
     </div>
   </header>
 
   <main>
-    <section class="page-section projects-section">
+    <section class="projects-section">
       <div class="page-inner">
-        
-        <!-- All Projects Grid -->
-        <div class="all-projects-container">
-          <h2>All Projects</h2>
-          <div id="all-projects-grid" class="all-projects-grid"></div>
-        </div>
 
-        <!-- Project Selector Dropdown -->
+        <!-- Project Selector & Quick Nav -->
         <div class="project-selector-container">
-          <label for="project-select" class="project-selector-label">Select Project:</label>
+          <label for="project-select" class="project-selector-label">Select Featured Project:</label>
           <select id="project-select" class="project-selector">
             <option value="">Choose a project...</option>
           </select>
         </div>
 
-        <!-- Project Preview Display (Full Width Modal-like View) -->
+        <!-- Interactive Project Preview Display -->
         <div id="project-display" class="project-display">
           <div class="project-display-content">
             <div class="project-preview">
-              <iframe id="display-iframe" src="" title="Project preview"></iframe>
+              <iframe id="display-iframe" src="" title="Live project preview"></iframe>
             </div>
             <div class="project-display-details">
               <h2 id="display-title"></h2>
               <p id="display-description"></p>
               <ul id="display-points" class="display-points"></ul>
-              <a id="display-link" class="btn-primary" target="_blank" rel="noopener">Visit Project</a>
+              <a id="display-link" class="btn-primary" target="_blank" rel="noopener">Visit Live Site ↗</a>
             </div>
           </div>
         </div>
 
-        <!-- Project Navigation -->
-        <div class="project-nav-container">
-          <div class="project-nav-list">
-            <p class="project-nav-label">Other Projects:</p>
-            <div id="project-nav-buttons" class="project-nav-buttons"></div>
-          </div>
+        <!-- Filter Buttons -->
+        <div class="project-nav-container" style="margin-bottom: 3rem;">
+          <p class="project-selector-label" style="margin-bottom: 0.75rem;">Interactive Showcase Tabs:</p>
+          <div id="project-nav-buttons" class="project-nav-buttons"></div>
+        </div>
+
+        <!-- All Projects Grid -->
+        <div class="all-projects-container">
+          <h2>All Showcase Projects</h2>
+          <div id="all-projects-grid" class="all-projects-grid"></div>
         </div>
 
         <div class="projects-cta">
-          <h2>Your Project Could Be Next</h2>
+          <h2>Your Business Could Be Next</h2>
           <p>
-            Whether you are launching a new idea or refreshing an existing brand,
-            Futuonz can design and build the web experience you need.
+            Whether launching a new startup or modernizing your existing digital platform,
+            Futuonz delivers high-performance web engineering to meet your ambitious goals.
           </p>
           <a href="contact.html" class="btn-primary">Discuss Your Project</a>
         </div>
@@ -97,56 +104,56 @@
         <span class="footer-tagline">The Future Comes Today</span>
       </div>
       <div class="footer-meta">
-        <span>&copy; 2025 Futuonz. All rights reserved.</span>
+        <span>&copy; 2026 Futuonz. All rights reserved.</span>
         <a href="mailto:futuonz@gmail.com">futuonz@gmail.com</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Project data
+    // Project dataset
     const projectsData = [
       {
-        tag: 'Restaurant / Hospitality',
+        tag: 'Hospitality',
         title: 'Brasserie Esta',
-        description: 'A stylish restaurant website with a modern layout, menu highlights and clear calls‑to‑action to reserve a table.',
+        description: 'A luxurious restaurant web platform built with responsive menu displays, reservation integration, and brand storytelling.',
         points: [
-          'Hero section that showcases the restaurant\'s brand',
-          'Menu and location information easy to access on mobile',
-          'Contact details and reservation paths kept highly visible'
+          'High-converting reservation workflow',
+          'Mobile-first responsive menu architecture',
+          'Optimized brand media showcase'
         ],
         url: 'https://brasserie-esta.com/'
       },
       {
-        tag: 'SMS Platform',
+        tag: 'SaaS Platform',
         title: 'SMSWay',
-        description: 'A clean, product‑driven site for an SMS gateway platform, focused on explaining features and getting users to sign up.',
+        description: 'Product-focused landing site for an SMS gateway platform, engineered to maximize sign-ups and API docs access.',
         points: [
-          'Simple breakdown of platform features and benefits',
-          'Clear pricing and CTA sections for sign‑ups',
-          'Responsive layout tuned for desktop and mobile users'
+          'Feature breakdown & interactive pricing table',
+          'Fast lead conversion sign-up funnels',
+          'Sub-second load times on mobile & desktop'
         ],
         url: 'https://smsway.lk/'
       },
       {
-        tag: 'Corporate / Business',
-        title: 'Corporate Landing (Hostinger)',
-        description: 'A professional one‑page corporate website built on Hostinger, created to present services, company story and a clear contact path.',
+        tag: 'Corporate Landing',
+        title: 'Corporate Suite',
+        description: 'A crisp one-page corporate website designed to communicate business authority and drive immediate direct inquiries.',
         points: [
-          'Section‑based layout covering services, about and contact',
-          'Consistent branding, colours and typography throughout',
-          'Contact and enquiry sections designed for quick responses'
+          'Modular service section architecture',
+          'Consistent dark aesthetic branding',
+          'Integrated quick contact lead forms'
         ],
         url: 'https://lightblue-sheep-358013.hostingersite.com/'
       },
       {
         tag: 'Digital Agency',
         title: 'Digital Keyz',
-        description: 'A bold, agency‑style site that highlights services, portfolio and a strong call‑to‑action for new clients.',
+        description: 'A high-impact digital agency website highlighting services, portfolio case studies, and instant booking paths.',
         points: [
-          'Hero and services sections tuned for lead generation',
-          'Portfolio / case study areas to show previous work',
-          'Contact and social links placed for quick reach‑out'
+          'Lead generation hero & service showcase',
+          'Case study portfolio grid integration',
+          'One-click direct client touchpoints'
         ],
         url: 'https://degitalkeyz.com/'
       }
@@ -154,16 +161,13 @@
 
     let currentProjectIndex = 0;
 
-    // Function to display project
     function displayProject(index) {
       const project = projectsData[index];
       currentProjectIndex = index;
 
-      // Update display
       document.getElementById('display-title').textContent = project.title;
       document.getElementById('display-description').textContent = project.description;
       
-      // Update points list
       const pointsList = document.getElementById('display-points');
       pointsList.innerHTML = '';
       project.points.forEach(point => {
@@ -172,33 +176,20 @@
         pointsList.appendChild(li);
       });
 
-      // Set iframe and link
       document.getElementById('display-iframe').src = project.url;
       document.getElementById('display-link').href = project.url;
 
-      // Update nav buttons - highlight current
       document.querySelectorAll('.project-nav-btn').forEach((btn, idx) => {
-        if (idx === index) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
+        btn.classList.toggle('active', idx === index);
       });
 
-      // Update project cards - highlight current
       document.querySelectorAll('.project-card').forEach((card, idx) => {
-        if (idx === index) {
-          card.classList.add('active');
-        } else {
-          card.classList.remove('active');
-        }
+        card.classList.toggle('active', idx === index);
       });
 
-      // Update dropdown selection
       document.getElementById('project-select').value = index;
     }
 
-    // Create navigation buttons
     function createNavButtons() {
       const navContainer = document.getElementById('project-nav-buttons');
       projectsData.forEach((project, index) => {
@@ -211,7 +202,6 @@
       });
     }
 
-    // Create project cards for grid
     function createProjectCards() {
       const gridContainer = document.getElementById('all-projects-grid');
       projectsData.forEach((project, index) => {
@@ -219,15 +209,18 @@
         card.className = 'project-card';
         if (index === 0) card.classList.add('active');
         card.innerHTML = `
+          <span style="font-size:0.75rem; font-weight:700; color:var(--color-primary); text-transform:uppercase; display:block; margin-bottom:0.35rem;">${project.tag}</span>
           <h3>${project.title}</h3>
           <p>${project.description}</p>
         `;
-        card.addEventListener('click', () => displayProject(index));
+        card.addEventListener('click', () => {
+          displayProject(index);
+          document.getElementById('project-display').scrollIntoView({ behavior: 'smooth' });
+        });
         gridContainer.appendChild(card);
       });
     }
 
-    // Populate project selector dropdown
     function populateProjectSelector() {
       const selector = document.getElementById('project-select');
       projectsData.forEach((project, index) => {
@@ -245,11 +238,50 @@
       });
     }
 
-    // Initialize
     createNavButtons();
     createProjectCards();
     populateProjectSelector();
     displayProject(0);
+
+    const toggleBtn = document.getElementById('mobile-toggle');
+    const navLinks = document.getElementById('nav-links');
+    
+    let backdrop = document.querySelector('.mobile-nav-backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'mobile-nav-backdrop';
+      document.body.appendChild(backdrop);
+    }
+
+    function closeMobileMenu() {
+      if (!navLinks) return;
+      navLinks.classList.remove('mobile-active');
+      if (toggleBtn) {
+        toggleBtn.classList.remove('active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.innerHTML = '<svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>';
+      }
+      backdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (toggleBtn && navLinks) {
+      toggleBtn.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('mobile-active');
+        toggleBtn.classList.toggle('active', isOpen);
+        toggleBtn.setAttribute('aria-expanded', isOpen);
+        backdrop.classList.toggle('active', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+        toggleBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>'
+          : '<svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>';
+      });
+
+      backdrop.addEventListener('click', closeMobileMenu);
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+    }
   </script>
 </body>
 </html>

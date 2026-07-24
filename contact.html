@@ -3,98 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Futuonz – Start Your Project</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="alternate icon" type="image/png" href="images/futuonz-home-logo.jpg" />
+  <title>Contact Futuonz – Start Your Web Project</title>
+  <meta name="description" content="Reach out to Futuonz for custom web development, WordPress builds, and digital design inquiries." />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="site-body">
-  <header class="page-header">
-    <div class="site-nav">
-      <nav class="hero-nav">
-        <a href="index.html" class="brand">
-          <img src="images/futuonz-home-logo.jpg" alt="Futuonz logo" class="brand-logo" />
-          <div class="brand-text">
-            <span class="brand-name">FUTUONZ</span>
-            <span class="brand-tagline">THE FUTURE COMES TODAY</span>
-          </div>
-        </a>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html" class="nav-cta nav-active">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
 
+  <header class="site-nav">
+    <nav class="hero-nav">
+      <a href="index.html" class="brand">
+        <img src="images/futuonz-home-logo.jpg" alt="Futuonz logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">FUTUONZ</span>
+          <span class="brand-tagline">THE FUTURE COMES TODAY</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" class="nav-cta nav-active">Get Started</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </nav>
+  </header>
+
+  <header class="page-header">
     <div class="page-hero-content">
-      <h1>Contact Futuonz</h1>
+      <span class="section-kicker">Get In Touch</span>
+      <h1>Let’s Build <span class="text-gradient">Your Future Site</span></h1>
       <p>
-        Tell us about your project and we will get back within one business day
-        with next steps and a suggested plan.
+        Tell us about your project vision and goals. We respond within 24 business hours with an action plan.
       </p>
     </div>
   </header>
 
   <main>
-    <section class="page-section contact-page-section">
+    <section class="contact-page-section">
       <div class="page-inner contact-page-inner">
         <div class="contact-details">
-          <h2>Let’s Talk About Your Website</h2>
+          <h2>Direct Contact Channels</h2>
           <p>
-            Share a bit about your business, your current situation and what you want
-            your new site to achieve. The more detail you provide, the better we can
-            prepare ideas for you.
+            Share details about your business and goals. We'll analyze your requirements and discuss the best technical approach.
           </p>
           <ul class="contact-info-list">
-            <li><strong>Email:</strong> <a href="mailto:futuonz@gmail.com">futuonz@gmail.com</a></li>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/94765893654?text=Hi%20Futuonz%2C%20I%27m%20interested%20in%20a%20new%20website." target="_blank" rel="noopener">+94 76 589 3654</a></li>
-            <li><strong>Availability:</strong> Monday – Friday, 10:00 – 18:00</li>
+            <li>
+              <strong>Direct Email</strong>
+              <a href="mailto:futuonz@gmail.com">futuonz@gmail.com</a>
+            </li>
+            <li>
+              <strong>Instant WhatsApp</strong>
+              <a href="https://wa.me/94765893654?text=Hi%20Futuonz%2C%20I%27m%20interested%20in%20building%20a%20new%20website." target="_blank" rel="noopener">+94 76 589 3654 ↗</a>
+            </li>
+            <li>
+              <strong>Working Hours</strong>
+              <span style="font-size:1.05rem; font-weight:600; color:var(--text-main);">Monday – Friday, 10:00 – 18:00 (IST)</span>
+            </li>
           </ul>
         </div>
 
         <form class="contact-form" id="contact-form" method="POST">
           <div class="form-row">
             <div class="form-field">
-              <label for="name">Full name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
             </div>
             <div class="form-field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
             </div>
           </div>
           <div class="form-row">
             <div class="form-field">
-              <label for="business">Business / brand name</label>
-              <input type="text" id="business" name="business" placeholder="Your company or brand" />
+              <label for="business">Company / Brand Name</label>
+              <input type="text" id="business" name="business" placeholder="Your Brand Ltd." />
             </div>
             <div class="form-field">
-              <label for="budget">Approximate budget / plan</label>
+              <label for="budget">Target Package / Budget</label>
               <select id="budget" name="budget">
-                <option value="">Choose a plan or price range</option>
-                <option value="basic-web">$80 – Basic Web Plan (1 page)</option>
-                <option value="standard-web">$325 – Standard Web Plan (5 pages)</option>
-                <option value="premium-web">$500 – Premium Web Plan (10 pages + e-commerce)</option>
-                <option value="poster-packages">$2.50-$75 – Poster & Social Media packages</option>
+                <option value="">Select plan or custom budget</option>
+                <option value="basic-web">$80 – Basic Web Plan (1 Page)</option>
+                <option value="standard-web">$325 – Standard Web Plan (5 Pages)</option>
+                <option value="premium-web">$500 – Premium Web Plan (10 Pages + E-Commerce)</option>
+                <option value="custom-build">Custom Built Web App Strategy</option>
+                <option value="poster-social">$2.50–$100 – Creative Poster / Social Pack</option>
               </select>
             </div>
           </div>
           <div class="form-field">
-            <label for="message">Project details</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us what you need from your new website"></textarea>
+            <label for="message">Project Overview *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project requirements and deadlines..." required></textarea>
           </div>
-          <input type="hidden" name="_subject" value="New contact from the Futuonz website" />
+
+          <input type="hidden" name="_subject" value="New Inquiry from Futuonz Website" />
           <input type="hidden" name="_captcha" value="false" />
-          <button type="submit" class="btn-primary contact-submit">Send Message</button>
+          
+          <button type="submit" class="btn-primary contact-submit">Send Project Message</button>
           <p class="form-note form-status" id="form-status" aria-live="polite"></p>
-          <p class="form-note">This form sends emails via FormSubmit.co; you will receive a verification link when you submit the first message.</p>
         </form>
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -102,49 +120,94 @@
         <span class="footer-tagline">The Future Comes Today</span>
       </div>
       <div class="footer-meta">
-        <span>&copy; 2025 Futuonz. All rights reserved.</span>
+        <span>&copy; 2026 Futuonz. All rights reserved.</span>
         <a href="mailto:futuonz@gmail.com">futuonz@gmail.com</a>
       </div>
     </div>
   </footer>
+
   <script>
     (function () {
+      // Auto-select plan from URL query params
+      const urlParams = new URLSearchParams(window.location.search);
+      const planParam = urlParams.get('plan');
+      const budgetSelect = document.getElementById('budget');
+      if (planParam && budgetSelect) {
+        if (planParam === 'basic') budgetSelect.value = 'basic-web';
+        if (planParam === 'standard') budgetSelect.value = 'standard-web';
+        if (planParam === 'premium') budgetSelect.value = 'premium-web';
+      }
+
+      // AJAX form submission
       const form = document.getElementById("contact-form");
       const status = document.getElementById("form-status");
 
-      if (!form || !status) {
-        return;
+      if (form && status) {
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const submitBtn = form.querySelector('button[type="submit"]');
+          status.textContent = "Sending message...";
+          submitBtn.disabled = true;
+
+          try {
+            const response = await fetch("https://formsubmit.co/ajax/futuonz@gmail.com", {
+              method: "POST",
+              headers: { Accept: "application/json" },
+              body: new FormData(form),
+            });
+
+            if (!response.ok) throw new Error("Submission error");
+
+            status.textContent = "Thank you! Your message has been sent successfully.";
+            form.reset();
+          } catch (err) {
+            status.textContent = "Unable to send right now. Please email futuonz@gmail.com directly.";
+          } finally {
+            submitBtn.disabled = false;
+          }
+        });
       }
 
-      form.addEventListener("submit", async function (event) {
-        event.preventDefault();
-        const submitButton = form.querySelector('button[type="submit"]');
-        status.textContent = "Sending your message…";
-        submitButton.disabled = true;
+      // Mobile nav
+      const toggleBtn = document.getElementById('mobile-toggle');
+      const navLinks = document.getElementById('nav-links');
+      
+      let backdrop = document.querySelector('.mobile-nav-backdrop');
+      if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.className = 'mobile-nav-backdrop';
+        document.body.appendChild(backdrop);
+      }
 
-        try {
-          const response = await fetch("https://formsubmit.co/ajax/futuonz@gmail.com", {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-            },
-            body: new FormData(form),
-          });
-
-          if (!response.ok) {
-            throw new Error("Submission failed");
-          }
-
-          status.textContent = "Thank you! Your message has been sent.";
-          form.reset();
-        } catch (error) {
-          status.textContent =
-            "Unable to send the message right now; please email futuonz@gmail.com directly.";
-          console.error("Contact form error:", error);
-        } finally {
-          submitButton.disabled = false;
+      function closeMobileMenu() {
+        if (!navLinks) return;
+        navLinks.classList.remove('mobile-active');
+        if (toggleBtn) {
+          toggleBtn.classList.remove('active');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          toggleBtn.innerHTML = '<svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>';
         }
-      });
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener('click', () => {
+          const isOpen = navLinks.classList.toggle('mobile-active');
+          toggleBtn.classList.toggle('active', isOpen);
+          toggleBtn.setAttribute('aria-expanded', isOpen);
+          backdrop.classList.toggle('active', isOpen);
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+          toggleBtn.innerHTML = isOpen
+            ? '<svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>'
+            : '<svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>';
+        });
+
+        backdrop.addEventListener('click', closeMobileMenu);
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+        });
+      }
     })();
   </script>
 </body>
